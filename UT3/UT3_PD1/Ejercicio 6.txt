@@ -1,0 +1,13 @@
+Ejercicio #6
+
+a) ¿Cuál es el costo de memoria en cada caso?
+La implementación de los elementos de la lista es igual para ambos. 
+La diferencia está en cómo almacenar cada elemento (arreglos o lista enlazada). 
+En el caso de arreglos, se reserva inicialmente una cantidad de espacio para cada elemento del arreglo, 
+y si fuese necesario más espacio se debe redimensionar el arreglo. En el caso de la lista enlazada, 
+la JVM va solicitando memoria a medida que vamos creando y enlazando los objetos, por lo tanto técnicamente 
+nuestra situación inicial es simplemente pedir 4 bytes para la referencia al primer elemento de la lista (más 8 bytes de la clase lista).
+
+b) ¿Cuáles son las consideraciones que tu Equipo haría referentes a la cantidad de alumnos del curso que soporta cada tipo de estructura? 
+Ambas estructuras soportan la misma cantidad de alumnos, sólo que los arreglos deben ser redimensionados. 
+Para una cantidad no estática de alumnos la cual crece progresivamente, creemos que es siempre mejor una lista enlazada.
