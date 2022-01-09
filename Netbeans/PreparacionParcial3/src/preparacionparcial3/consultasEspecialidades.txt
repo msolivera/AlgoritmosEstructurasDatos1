@@ -1,0 +1,31 @@
+Alergologia,3
+Anestesiologia y reanimacion,31
+Cardiologia,9
+Endocrinologia,82
+Gastroenterologia,6
+Geriatria,34
+Hematologia y hemoterapia,66
+Infectologia,91
+Medicina aeroespacial,26
+Medicina de urgencias,77
+Medicina del deporte,25
+Medicina del trabajo,68
+Medicina familiar y comunitaria,63
+Medicina fisica y rehabilitacion,5
+Medicina intensiva,17
+Medicina interna,5
+Medicina legal y forense,85
+Medicina preventiva y salud publica,30
+Medicina veterinaria,54
+Nefrologia,95
+Neumologia,17
+Neurologia,98
+Nutriologia,75
+Oftalmologia,30
+Oncologia,30
+Pediatria,18
+Psiquiatria,46
+Rehabilitacion,58
+Reumatologia,72
+Toxicologia,69
+Urologia,94

@@ -1,0 +1,134 @@
+SUBEQUIPO A
+
+Metodo cantidadHojas para TArbolBB:
+Si el arbol no tiene raiz devolvemos 0, sino invocamos al metodo de nodo contar sobre la raiz del arbol.
+
+PRECONDICIONES:
+(ninguna)
+POSTCONDICIONES:
++ El tamaño del arbol, su altura, y la profundidad de la raiz debera permanecer intacta.
++ El valor devuelto debe ser mayor o igual a 0.
+
+cantidadHojas() devuelve entero
+COMIENZO
+si raiz = nulo:					O(1)
+    devolver 0					O(1)
+sino:
+    devolver raiz.contar()		O(N)
+fin si
+FIN
+
+O(N)
+
+Metodo cantidadHojas para TNodoABB:
+Iniciamos la cuenta en 0.
+Si el nodo tiene hijo izquierdo invocamos el metodo contar para el mismo y sumamos el valor devuelvo a la cuenta.
+Si el nodo tiene hijo derecho invocamos el metodo contar para el mismo y sumamos el valor devuelvo a la cuenta.
+Si la cuenta es 0 devolvemos 1, en caso contrario devolvemos la cuenta.
+
+PRECONDICIONES:
+(ninguna)
+POSTCONDICIONES:
++ La altura, y la profundidad del nodo debera permanecer intacta.
++ El valor devuelto debe ser mayor a 0.
+
+cantidadHojas() devuelve entero
+COMIENZO
+cuenta <- 0										O(1)
+si hijoIzquierdo <> nulo:						O(1)
+    cuenta <- cuenta + hijoIzquierdo.contar()	O(N)
+fin si
+si hijoDerecho <> nulo:							O(1)
+    cuenta <- cuenta + hijoDerecho.contar()		O(M)
+fin si
+si cuenta = 0:									O(1)
+    devolver 1									O(1)
+sino:
+    devolver cuenta								O(1)
+fin si
+FIN
+
+O(X)
+
+
+Caso de prueba:
+-Arbol vacio tiene que devolver 0
+caso 1:
+COMIENZO
+arbol = nuevo arbol
+resEsperado = 0
+assertEquals(resEsperado, arbol.cantidadHojas())
+FIN
+
+
+-Un arbol con cantidad de hojas conocidas debe devolver la cantidad correcta
+caso 2:
+COMIENZO
+arbol = nuevo arbol
+arbol.insertar(1)
+arbol.insertar(2)
+arbol.insertar(3)
+resEsperado = 1
+assertEquals(resEsperado, arbol.cantidadHojas())
+FIN
+
+
+SUBEQUIPO B
+
+
+Nivel de un nodo
+
+PRECONDICIONES:
++El arbol existe y contiene al menos el nodo buscado
+POSTCONDICIONES:
++El arbol permanece incambiado
++Se devuelve el nivel del nodo buscado
+
+
+Metodo nivel para arbol
+COMIENZO
+si raiz = nulo
+	devolver -1
+sino
+	devolver raiz.nivel()
+fin si
+FIN
+
+
+Metodo nivel para nodos
+COMIENZO
+si nodo.clave == unaClave
+	devolver 0
+fin si
+
+si clave < nodo.clave
+	nodoActual <- hijoIzq
+sino
+	nodoActual <- hijoDer
+fin si
+
+si nodoActual <> nulo
+	devolver 1 + nodoActual.nivel()
+fin si
+
+devolver 0
+FIN
+
+Casos de prueba:
+-Partiendo de un arbol cuyos nodos se conoce el nivel, se invoca al metodo
+sobre un nodo y se compara el resultado obtenido con el esperado.
+COMIENZO
+arbol <- nuevo arbol()
+arbol.insertar(1)
+arbol.insertar(2)
+resEsperado <- arbol.nivel(2)
+assertEquals(resEsperado, 1)
+FIN
+
+-Un arbol que posea solo raiz, debe devolver cero.
+COMIENZO
+arbol <- nuevo arbol()
+arbol.insertar(1)
+resEsperado <- arbol.nivel(1)
+assertEquals(resEsperado, 0)
+FIN

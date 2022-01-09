@@ -1,0 +1,85 @@
+package UT4TA5;
+
+
+
+
+public interface IArbolBB<T> {
+
+    /**
+     * Inserta un elemento en el arbol. En caso de ya existir un elemento con la
+     * clave indicada en "unElemento", retorna falso.
+     *
+     * @param unElemento Elemento a insertar
+     * @return Exito de la operacián
+     */
+
+    public boolean insertar(TElementoAB<T> unElemento);
+
+ 
+
+    /**
+     * Busca un elemento dentro del árbol.
+     *
+     *
+     * @param unaEtiqueta Etiqueta identificadora del elemento a buscar.
+     * .
+     * @return Elemento encontrado. En caso de no encontrarlo, retorna nulo.
+     */
+    public TElementoAB<T> buscar(Comparable unaEtiqueta);
+
+    /**
+     * Imprime en PreOrden los elementos del árbol, separados por guiones.
+     *
+     * @return String conteniendo el preorden separado por guiones.
+     */
+    public String preOrden();
+
+    /**
+     * Imprime en InOrden los elementos del árbol, separados por guiones.
+     *
+     * @return String conteniendo el preorden separado por guiones.
+     */
+    public String inOrden();
+
+    /**
+     * Imprime en PostOrden los elementos del árbol, separados por guiones.
+     *
+     * @return String conteniendo el preorden separado por guiones.
+     */
+    public String postOrden();
+
+    /**
+     * Devuelve la altura de un arbol
+     * @param arbol TArbolBB Arbol cuya altura se desea calcular
+     * @return 
+     */
+    public int obtenerAltura();
+
+    /**
+     * Devuelve la altura de un arbol
+     * @param arbol TArbolBB Arbol cuya altura se desea calcular
+     * @return 
+     */
+    public int obtenerTamanio();
+   
+       /**
+     * Elimina un elemento dada una etiqueta.
+     * @param unaEtiqueta 
+     */
+    public void eliminar(Comparable unaEtiqueta);
+    
+    /**
+     * Devuelve la cantidad de hojas en el arbol
+     * @return (int) Cantidad de hojas en el arbol
+     */
+    public int cantidadHojas();
+    
+    /**
+     * Devuelve el nivel de un cierto nodo
+     * @param unaEtiqueta Etiqueta a buscar
+     * @return (int) nivel del elemento buscado
+     */
+    public int nivel(Comparable unaEtiqueta);
+	
+}
+

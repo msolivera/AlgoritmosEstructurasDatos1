@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Meki
+ */
+public class ContadorPalabras {
+    
+    public int contarPalabras(String frase){
+        int contador =0;
+        int largo = frase.length();
+        
+        for(int i =0; i<largo ; i++){
+          if ((!(Character.isDigit(frase.charAt(i))))&& (!(Character.isLetter(frase.charAt(i)))))
+                  {
+                        if ((!(Character.isDigit(frase.charAt(i-1))))&& (!(Character.isLetter(frase.charAt(i-1))))){
+                            
+                        }
+                        else{
+                            contador++;
+                        }
+                  }
+        }
+        return contador;
+    }
+    
+    
+    
+}

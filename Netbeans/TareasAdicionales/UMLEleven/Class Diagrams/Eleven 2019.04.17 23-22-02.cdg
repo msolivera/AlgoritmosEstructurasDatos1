@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Eleven">
+  <ClassDiagramComponents>
+    <Class name="Lista" package="elevenBasic" visibility="public" xPosition="377.0" yPosition="29.0">
+      <Fields>
+        <Field name="primero" type="Nodo&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="unNodo"/>
+        </Method>
+        <Method name="buscar" returnType="Nodo&lt;T&gt;" visibility="public">
+          <Argument type="Comparable" name="clave"/>
+        </Method>
+        <Method name="eliminar" returnType="boolean" visibility="public">
+          <Argument type="Comparable" name="clave"/>
+        </Method>
+        <Method name="imprimir" returnType="String" visibility="public"/>
+        <Method name="imprimir" returnType="String" visibility="public">
+          <Argument type="String" name="separador"/>
+        </Method>
+        <Method name="cantElementos" returnType="int" visibility="public"/>
+        <Method name="esVacia" returnType="boolean" visibility="public"/>
+        <Method name="getPrimero" returnType="Nodo&lt;T&gt;" visibility="public"/>
+        <Method name="setPrimero" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="unNodo"/>
+        </Method>
+        <Method name="quitarMasChico" returnType="Nodo" visibility="public"/>
+        <Method name="insertarPrimero" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="unNodo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Nodo" package="elevenBasic" visibility="public" xPosition="119.0" yPosition="356.0">
+      <Fields>
+        <Field name="etiqueta" type="Comparable" visibility="private" isFinal="true"/>
+        <Field name="dato" type="T" visibility="private"/>
+        <Field name="siguiente" type="Nodo&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Comparable" name="etiqueta"/>
+          <Argument type="T" name="dato"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDato" returnType="T" visibility="public"/>
+        <Method name="setDato" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+        </Method>
+        <Method name="getEtiqueta" returnType="Comparable" visibility="public"/>
+        <Method name="imprimir" returnType="void" visibility="public"/>
+        <Method name="imprimirEtiqueta" returnType="void" visibility="public"/>
+        <Method name="clonar" returnType="Nodo&lt;T&gt;" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Nodo" name="unNodo"/>
+        </Method>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Comparable" name="etiqueta"/>
+        </Method>
+        <Method name="getSiguiente" returnType="Nodo&lt;T&gt;" visibility="public"/>
+        <Method name="setSiguiente" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="nodo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ElevenCalculador" package="elevenCode" visibility="public" xPosition="774.0" yPosition="1278.0">
+      <Fields>
+        <Field name="listaJugadores" type="Lista&lt;Jugador&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaEquipos" type="Lista&lt;Equipo&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaPartidos" type="Lista&lt;Partido&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaPartidosCompletos" type="Lista&lt;PartidoCompleto&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaEventos" type="Lista&lt;Evento&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaEventosVerificados" type="Lista&lt;Evento&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaLigas" type="Lista&lt;Liga&gt;" visibility="private" isFinal="true"/>
+        <Field name="listaTemporadas" type="Lista&lt;Temporada&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarJugadores" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarEquipos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarPartidos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarEventos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarPartidosCompleto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="crearTemporadasLigas" returnType="void" visibility="public"/>
+        <Method name="depuradorPartidos" returnType="void" visibility="public"/>
+        <Method name="depuradorPartidosEquipos" returnType="void" visibility="public"/>
+        <Method name="depuradorDeEventos" returnType="void" visibility="public"/>
+        <Method name="transformacionEventoJugador" returnType="void" visibility="public"/>
+        <Method name="transformacionEventoEquipoEvento" returnType="void" visibility="public"/>
+        <Method name="transformacionEventoEquipoOponente" returnType="void" visibility="public"/>
+        <Method name="asignarEventoJugador" returnType="void" visibility="public"/>
+        <Method name="imprimirJugadores" returnType="void" visibility="public"/>
+        <Method name="imprimirEquipos" returnType="void" visibility="public"/>
+        <Method name="imprimirPartidos" returnType="void" visibility="public"/>
+        <Method name="imprimirPartidosCompletos" returnType="void" visibility="public"/>
+        <Method name="imprimirEventos" returnType="void" visibility="public"/>
+        <Method name="imprimirLigas" returnType="void" visibility="public"/>
+        <Method name="imprimirTemporadas" returnType="void" visibility="public"/>
+        <Method name="cantidadEquipos" returnType="int" visibility="public"/>
+        <Method name="cantidadJugadores" returnType="int" visibility="public"/>
+        <Method name="cantidadPartidos" returnType="int" visibility="public"/>
+        <Method name="cantidadPartidosCompletos" returnType="int" visibility="public"/>
+        <Method name="cantidadEventos" returnType="int" visibility="public"/>
+        <Method name="cantidadEventosVerificados" returnType="int" visibility="public"/>
+        <Method name="cantidadLigas" returnType="int" visibility="public"/>
+        <Method name="cantidadTemporadas" returnType="int" visibility="public"/>
+        <Method name="idNombreJugador" returnType="String" visibility="public">
+          <Argument type="int" name="unId"/>
+        </Method>
+        <Method name="idNombreEquipo" returnType="String" visibility="public">
+          <Argument type="int" name="unId"/>
+        </Method>
+        <Method name="nombreIdJugador" returnType="int" visibility="public">
+          <Argument type="String" name="unNombre"/>
+        </Method>
+        <Method name="nombreIdEquipo" returnType="int" visibility="public">
+          <Argument type="String" name="unNombre"/>
+        </Method>
+        <Method name="onceIdeal" returnType="void" visibility="public"/>
+        <Method name="mostrarEquipo" returnType="Equipo" visibility="public">
+          <Argument type="Equipo" name="equipo"/>
+        </Method>
+        <Method name="masParticipacion" returnType="Nodo&lt;Jugador&gt;" visibility="public">
+          <Argument type="Lista&lt;Jugador&gt;" name="lista"/>
+        </Method>
+        <Method name="masParticipacionPorTemporada" returnType="void" visibility="public">
+          <Argument type="String" name="temporada"/>
+        </Method>
+        <Method name="compocisionLiga" returnType="void" visibility="public">
+          <Argument type="String" name="nombreLiga"/>
+        </Method>
+        <Method name="nombreLigasDeJugador" returnType="void" visibility="public">
+          <Argument type="String" name="nombreJugador"/>
+        </Method>
+        <Method name="mejorArquero" returnType="void" visibility="public"/>
+        <Method name="mejoresDefensas" returnType="void" visibility="public"/>
+        <Method name="mejorAtaque" returnType="void" visibility="public"/>
+        <Method name="arqueroMenosEfectivo" returnType="void" visibility="public"/>
+        <Method name="defensasMenosEfectivos" returnType="void" visibility="public"/>
+        <Method name="ataqueMenosEfectivos" returnType="void" visibility="public"/>
+        <Method name="equipoGoleador" returnType="void" visibility="public"/>
+        <Method name="equipoGoleado" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Equipo" package="elevenCode" visibility="public" xPosition="719.0" yPosition="489.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isFinal="true"/>
+        <Field name="nombre" type="String" visibility="private" isFinal="true"/>
+        <Field name="todosLosjugadores" type="Lista&lt;Jugador&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Evento" package="elevenCode" visibility="public" xPosition="1168.0" yPosition="1702.0">
+      <Fields>
+        <Field name="idPartido" type="String" visibility="private" isFinal="true"/>
+        <Field name="idEvento" type="String" visibility="private" isFinal="true"/>
+        <Field name="tipoEvento1" type="String" visibility="private" isFinal="true"/>
+        <Field name="tipoEvento2" type="String" visibility="private" isFinal="true"/>
+        <Field name="equipoEvento" type="String" visibility="private"/>
+        <Field name="oponente" type="String" visibility="private"/>
+        <Field name="jugador1" type="String" visibility="private"/>
+        <Field name="idEquipoEvento" type="int" visibility="private"/>
+        <Field name="idOponente" type="int" visibility="private"/>
+        <Field name="idJugador1" type="int" visibility="private"/>
+        <Field name="shotPlace" type="String" visibility="private" isFinal="true"/>
+        <Field name="shotOutCome" type="String" visibility="private" isFinal="true"/>
+        <Field name="isGoal" type="String" visibility="private" isFinal="true"/>
+        <Field name="verificado" type="int" visibility="private"/>
+        <Field name="equiposTransformados" type="int" visibility="private"/>
+        <Field name="jugadorTransformado" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idOdsp"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="eventType1"/>
+          <Argument type="String" name="eventType2"/>
+          <Argument type="String" name="eventTeam"/>
+          <Argument type="String" name="opponent"/>
+          <Argument type="String" name="player"/>
+          <Argument type="String" name="shotPlace"/>
+          <Argument type="String" name="shotOutCome"/>
+          <Argument type="String" name="isGoal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getIdPartido" returnType="String" visibility="public"/>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+        <Method name="setVerificadoUno" returnType="void" visibility="public"/>
+        <Method name="getVerificado" returnType="int" visibility="public"/>
+        <Method name="setEquiposTransformados" returnType="void" visibility="public"/>
+        <Method name="setEquiposTransformadosCero" returnType="void" visibility="public"/>
+        <Method name="getEquiposTransformados" returnType="int" visibility="public"/>
+        <Method name="setJugadorTransformado" returnType="void" visibility="public"/>
+        <Method name="getJugadorTransformado" returnType="int" visibility="public"/>
+        <Method name="setIdEquipoEvento" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEquipoEvento" returnType="String" visibility="public"/>
+        <Method name="setOponente" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getOponente" returnType="String" visibility="public"/>
+        <Method name="setJugador1" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getJugador1" returnType="String" visibility="public"/>
+        <Method name="getIdJugador1" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="elevenCode" visibility="public" xPosition="1633.0" yPosition="1047.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isFinal="true"/>
+        <Field name="nombre" type="String" visibility="private" isFinal="true"/>
+        <Field name="susEquipos" type="Lista&lt;Equipo&gt;" visibility="private"/>
+        <Field name="posiciones" type="Lista&lt;String&gt;" visibility="private"/>
+        <Field name="susEvento" type="Lista&lt;Evento&gt;" visibility="private"/>
+        <Field name="susLigas" type="Lista&lt;Liga&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+        <Method name="infoReducido" returnType="void" visibility="public"/>
+        <Method name="infoLigas" returnType="void" visibility="public"/>
+        <Method name="susEventos" returnType="Lista&lt;Evento&gt;" visibility="public"/>
+        <Method name="susLigas" returnType="Lista&lt;Liga&gt;" visibility="public"/>
+        <Method name="participaciones" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Liga" package="elevenCode" visibility="public" xPosition="1821.0" yPosition="468.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private" isFinal="true"/>
+        <Field name="temporadas" type="Lista&lt;Temporada&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getTemporadas" returnType="Lista&lt;Temporada&gt;" visibility="public"/>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Partido" package="elevenCode" visibility="public" xPosition="119.0" yPosition="1650.0">
+      <Fields>
+        <Field name="idOdps" type="String" visibility="private" isFinal="true"/>
+        <Field name="fecha" type="String" visibility="private" isFinal="true"/>
+        <Field name="temporada" type="String" visibility="private" isFinal="true"/>
+        <Field name="liga" type="String" visibility="private" isFinal="true"/>
+        <Field name="equipoLocalNombre" type="int" visibility="private" isFinal="true"/>
+        <Field name="equipoVisitanteNombre" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idOdsp"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="league"/>
+          <Argument type="String" name="season"/>
+          <Argument type="int" name="nombre1"/>
+          <Argument type="int" name="nombre2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getFecha" returnType="String" visibility="public"/>
+        <Method name="getTemporada" returnType="String" visibility="public"/>
+        <Method name="getLiga" returnType="String" visibility="public"/>
+        <Method name="getLocal" returnType="int" visibility="public"/>
+        <Method name="getVisitante" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PartidoCompleto" package="elevenCode" visibility="public" xPosition="119.0" yPosition="756.0">
+      <Fields>
+        <Field name="idOdps" type="String" visibility="private"/>
+        <Field name="fecha" type="String" visibility="private" isFinal="true"/>
+        <Field name="temporada" type="String" visibility="private" isFinal="true"/>
+        <Field name="liga" type="String" visibility="private" isFinal="true"/>
+        <Field name="localId" type="int" visibility="private" isFinal="true"/>
+        <Field name="visitanteId" type="int" visibility="private" isFinal="true"/>
+        <Field name="equipos" type="Lista&lt;Equipo&gt;" visibility="package"/>
+        <Field name="jugadoresLocal" type="Lista&lt;Jugador&gt;" visibility="package"/>
+        <Field name="jugadoresVisitante" type="Lista&lt;Jugador&gt;" visibility="package"/>
+        <Field name="posiciones" type="String[]" visibility="package"/>
+        <Field name="verificado" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fecha"/>
+          <Argument type="String" name="temporada"/>
+          <Argument type="String" name="liga"/>
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="otroId"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="nuevoId"/>
+        </Method>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getFecha" returnType="String" visibility="public"/>
+        <Method name="getTemporada" returnType="String" visibility="public"/>
+        <Method name="getLiga" returnType="String" visibility="public"/>
+        <Method name="getIdLocal" returnType="int" visibility="public"/>
+        <Method name="getIdVisitante" returnType="int" visibility="public"/>
+        <Method name="getVerificado" returnType="int" visibility="public"/>
+        <Method name="setVerificado" returnType="void" visibility="public"/>
+        <Method name="getJugadoresLocales" returnType="Lista&lt;Jugador&gt;" visibility="public"/>
+        <Method name="getJugadoresVisitantes" returnType="Lista&lt;Jugador&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Temporada" package="elevenCode" visibility="public" xPosition="1369.0" yPosition="612.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private" isFinal="true"/>
+        <Field name="susPartidos" type="Lista&lt;PartidoCompleto&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getSusPartidos" returnType="Lista&lt;PartidoCompleto&gt;" visibility="public"/>
+        <Method name="mostrarInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ILista" package="elevenBasic" visibility="public" xPosition="774.0" yPosition="30.0">
+      <Methods>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="buscar" returnType="Nodo&lt;T&gt;" visibility="public">
+          <Argument type="Comparable" name="clave"/>
+        </Method>
+        <Method name="eliminar" returnType="boolean" visibility="public">
+          <Argument type="Comparable" name="clave"/>
+        </Method>
+        <Method name="imprimir" returnType="String" visibility="public"/>
+        <Method name="imprimir" returnType="String" visibility="public">
+          <Argument type="String" name="separador"/>
+        </Method>
+        <Method name="cantElementos" returnType="int" visibility="public"/>
+        <Method name="esVacia" returnType="boolean" visibility="public"/>
+        <Method name="setPrimero" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="unNodo"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="INodo" package="elevenBasic" visibility="public" xPosition="65.0" yPosition="20.0">
+      <Methods>
+        <Method name="getDato" returnType="T" visibility="public"/>
+        <Method name="getSiguiente" returnType="Nodo&lt;T&gt;" visibility="public"/>
+        <Method name="setSiguiente" returnType="void" visibility="public">
+          <Argument type="Nodo&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="imprimir" returnType="void" visibility="public"/>
+        <Method name="imprimirEtiqueta" returnType="void" visibility="public"/>
+        <Method name="getEtiqueta" returnType="Comparable" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Comparable" name="etiqueta"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="IElevenCalculador" package="elevenCode" visibility="public" xPosition="1081.0" yPosition="20.0">
+      <Methods>
+        <Method name="cargarJugadores" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarEquipos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarPartidos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarPartidosCompleto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="cargarEventos" returnType="void" visibility="public">
+          <Argument type="String" name="nombreArchivo"/>
+        </Method>
+        <Method name="imprimirJugadores" returnType="void" visibility="public"/>
+        <Method name="imprimirEquipos" returnType="void" visibility="public"/>
+        <Method name="imprimirPartidos" returnType="void" visibility="public"/>
+        <Method name="imprimirEventos" returnType="void" visibility="public"/>
+        <Method name="onceIdeal" returnType="void" visibility="public"/>
+        <Method name="mostrarEquipo" returnType="Equipo" visibility="public">
+          <Argument type="Equipo" name="equipo"/>
+        </Method>
+        <Method name="masParticipacionPorTemporada" returnType="void" visibility="public">
+          <Argument type="String" name="temporada"/>
+        </Method>
+        <Method name="compocisionLiga" returnType="void" visibility="public">
+          <Argument type="String" name="nombreLiga"/>
+        </Method>
+        <Method name="nombreLigasDeJugador" returnType="void" visibility="public">
+          <Argument type="String" name="nombreJugador"/>
+        </Method>
+        <Method name="mejorArquero" returnType="void" visibility="public"/>
+        <Method name="mejoresDefensas" returnType="void" visibility="public"/>
+        <Method name="mejorAtaque" returnType="void" visibility="public"/>
+        <Method name="arqueroMenosEfectivo" returnType="void" visibility="public"/>
+        <Method name="defensasMenosEfectivos" returnType="void" visibility="public"/>
+        <Method name="ataqueMenosEfectivos" returnType="void" visibility="public"/>
+        <Method name="equipoGoleador" returnType="void" visibility="public"/>
+        <Method name="equipoGoleado" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="equipos" source="elevenCode.PartidoCompleto" target="elevenCode.Equipo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Equipo&gt;"/>
+    <HasRelation name="listaEquipos" source="elevenCode.ElevenCalculador" target="elevenCode.Equipo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Equipo&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="elevenCode.ElevenCalculador" target="elevenCode.IElevenCalculador"/>
+    <UseRelation source="elevenCode.IElevenCalculador" target="elevenCode.Equipo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenCode.Liga" target="elevenCode.Temporada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="elevenBasic.Nodo" target="elevenBasic.INodo"/>
+    <HasRelation name="todosLosjugadores" source="elevenCode.Equipo" target="elevenCode.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Jugador&gt;"/>
+    <UseRelation source="elevenCode.Jugador" target="elevenCode.Evento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="susLigas" source="elevenCode.Jugador" target="elevenCode.Liga" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Liga&gt;"/>
+    <UseRelation source="elevenCode.ElevenCalculador" target="elevenCode.Equipo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenCode.Jugador" target="elevenCode.Liga" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenBasic.Lista" target="elevenBasic.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenCode.ElevenCalculador" target="elevenCode.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenCode.PartidoCompleto" target="elevenCode.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaPartidosCompletos" source="elevenCode.ElevenCalculador" target="elevenCode.PartidoCompleto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;PartidoCompleto&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="elevenBasic.Lista" target="elevenBasic.ILista"/>
+    <UseRelation source="elevenCode.Temporada" target="elevenCode.PartidoCompleto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaEventos" source="elevenCode.ElevenCalculador" target="elevenCode.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Evento&gt;"/>
+    <HasRelation name="listaTemporadas" source="elevenCode.ElevenCalculador" target="elevenCode.Temporada" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Temporada&gt;"/>
+    <HasRelation name="susPartidos" source="elevenCode.Temporada" target="elevenCode.PartidoCompleto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;PartidoCompleto&gt;"/>
+    <IsRelation name="is" source="elevenBasic.ListaQueOrdena" target="elevenBasic.Lista"/>
+    <UseRelation source="elevenBasic.Nodo" target="elevenBasic.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jugadoresLocal" source="elevenCode.PartidoCompleto" target="elevenCode.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Jugador&gt;"/>
+    <HasRelation name="susEquipos" source="elevenCode.Jugador" target="elevenCode.Equipo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Equipo&gt;"/>
+    <HasRelation name="listaPartidos" source="elevenCode.ElevenCalculador" target="elevenCode.Partido" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Partido&gt;"/>
+    <HasRelation name="susEvento" source="elevenCode.Jugador" target="elevenCode.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Evento&gt;"/>
+    <HasRelation name="listaEventosVerificados" source="elevenCode.ElevenCalculador" target="elevenCode.Evento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Evento&gt;"/>
+    <HasRelation name="listaLigas" source="elevenCode.ElevenCalculador" target="elevenCode.Liga" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Liga&gt;"/>
+    <HasRelation name="temporadas" source="elevenCode.Liga" target="elevenCode.Temporada" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Temporada&gt;"/>
+    <UseRelation source="elevenBasic.INodo" target="elevenBasic.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="elevenBasic.ILista" target="elevenBasic.Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaJugadores" source="elevenCode.ElevenCalculador" target="elevenCode.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Jugador&gt;"/>
+    <HasRelation name="jugadoresVisitante" source="elevenCode.PartidoCompleto" target="elevenCode.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Lista&lt;Jugador&gt;"/>
+    <UseRelation source="elevenBasic.ListaQueOrdena" target="elevenBasic.Lista" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

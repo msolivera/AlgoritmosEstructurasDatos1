@@ -1,0 +1,16 @@
+pos; pos_desc
+----------------------------
+"A","Arquero"
+----------------------------
+DEFENSAS
+"ZD","Zaguero Derecho"
+"ZC","Zaguero Central"
+"ZI","Zaguero Izquierdo"
+----------------------------
+"MD","Mediocampista Derecho"
+"MC","Mediocampista Central"
+"MI","Mediocampista Izquierdo"
+----------------------------
+"DD","Delantero Derecho"
+"DC","Delantero Central"
+"DI","Delantero Izquierdo"
